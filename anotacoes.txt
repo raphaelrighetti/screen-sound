@@ -217,6 +217,18 @@ Possui método como "GetString()", "GetStringAsync()" e etc. Eles servem para fa
 
 Importante saber que os métodos "Async" retornam uma task que ainda não foi terminada, mas que podemos especificar para o C# aguardar estar completa para mexer com o valor com a palavra chave "await" antes de executarmos o método. Dessa forma o retorno do método não será mais uma task, e sim uma referência do tipo que estamos pegando da resposta.
 
+============async & await============
+
+Quando vamos utilizar uma operação async dentro de um método e precisamos utilizar o await, devemos marcar o método como async utilizando a keyword "async" na assinatura do método.
+
+É importante lembrar que quando marcamos o nosso método como async, por convenção já é esperado que ele retorne uma "Task". Quando não queremos retornar uma task, podemos usar os métodos "GetAwaiter()" e "GetResult()" na nossa operação assíncrona, dessa forma fazendo com que o nosso método espere o retorno do método assíncrono sem termos que torná-lo um método async. Esses métodos são de Task, por isso estão presentes em todos os métodos que retornam uma Task.
+
+============NuGet============
+
+É o gerenciador de pacotes do C# / .NET.
+
+Podemos acessar uma interface para o NuGet no VisualStudio a partir da pasta "Dependências".
+
 ============ANNOTATIONS============
 
 Temos annotations no C#, que funcionam dee maneira bem parecida com as annotations do Java.

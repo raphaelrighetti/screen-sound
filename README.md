@@ -38,6 +38,26 @@ Além disso, vi que todos os tipos do C# herdam de Object em sua hierarquia, que
 
 Também dei uma olhada nas documentações de "List<>" e "IEnumerable<>" e vi que é uma boa utilizar o IEnumerable quando queremos uma coleção iterável mas que não dê a facilidade de adicionar e remover itens, assim protegendo nossas coleções e deixando o código mais encapsulado.
 
+### Aula 5
+
+#### Integrando com biblioteca externa
+
+Nesta aula aprendi a adicionar novas bibliotecas no nosso projeto com o NuGet, utilizando o gerenciador de pacotes do NuGet do VisualStudio.
+
+No curso foi mostrado como integrar com a API da OpenAI, que nos dá acesso à API do ChatGPT, DALL-E e outros serviços da OpenAI.
+
+Além disso, aprendi mais sobre o "async & await" no C#, vendo como criar um método "async" e como esperar o retorno de uma Task sem utilizar a palavra-chave "await".
+
+Muito interessante ver como o JavaScript tem coisas tanto do Java quanto do C#.
+
+### Conclusão
+
+Neste curso aprendi bastante coisa de como utilizar a orientação a objetos no C#, assim como mais detalhes e peculiaridades da linguagem que eu ainda não estava familizarizado.
+
+Aprendi novas palavras-chave, conceito de namespaces, mais detalhes sobre as coleções no C# e operações assíncronas.
+
+Foi um curso muito bom no geral, apesar de eu já ter conhecimento sobre orientação a objetos. Deu pra tirar bastante proveito dos detalhes da linguagem.
+
 ## C#: consumindo API, gravando arquivos e utilizando o LINQ
 
 Neste curso irei aprender a como consumir APIs realizando requisições HTTP no C#, mexer com arquivos do sistema e utilizar o LINQ.
