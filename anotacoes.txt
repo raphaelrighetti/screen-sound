@@ -152,6 +152,14 @@ Se não utilizamos o using com o namespace que queremos, devemos passar o full q
 
 Já quando uma classe é pública, ela pode ser acessada a partir de outros projetos, como as classes padrão do .NET.
 
+============virtual & override============
+
+"override" é a palavra chave que utilizamos para sobrescrever um método que está na classe super da nossa classe em questão.
+
+"virtual" é a palavra chave que utilizamos para dizer que um método da classe superior pode ser sobrescrito na classe inferior.
+
+Podemos utilizar a palavra chave "base" para acessar a classe superior e seus métodos, assim podendo até executar o método que estamos sobrescrevendo da classe superior dentro do método da classe inferior.
+
 ============using (<atribuição de referência>) { }============
 
 Utilizar o using dessa forma serve para gerenciar a nossa referência e usá-la apenas no bloco de código que vem após a expressão using.
@@ -197,4 +205,3 @@ Usamos esta anotação para informar que esse é o construtor que deve ser utili
 É uma classe utilizada para fazer a conversão de JSON para objetos C# e vice-versa.
 
 Possui métodos como "Deserialize<>()" e etc. Servem para fazer essa conversão.
-
