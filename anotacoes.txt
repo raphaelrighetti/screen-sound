@@ -1,3 +1,7 @@
+============public static void Main(string[] args)============
+
+Toda aplicação .NET precisa de um método "Main()" que será o ponto inicial da aplicação. Quando não criamos a classe e escrevemos o nosso código de maneira imperativa, o compilador do C# está criando toda a estrutura da classe com o método Main pará nós por baixo dos panos.
+
 ============STRING EM BLOCO============
 
 No C#, conseguimos fazer umas string que respeita as quebras de linhas e tudo mais colocando um "@" na frente das aspas.
@@ -134,6 +138,20 @@ Método de filtragem de listas.
 
 Recebe uma lambda expression para fazer a ordem.
 
+============namespace============
+
+Um namespace é um modo de definirmos onde pertence uma classe, assim como os pacotes do Java.
+
+Normalmente colocamos o nome do namespace encadeando o nome das pastas.
+
+Se não utilizamos o using com o namespace que queremos, devemos passar o full qualified name.
+
+============internal============
+
+É um modificador de acesso que especifica que aquela classe só poderá ser acessada no nosso projeto, mesmo que utilizem nosso projeto em algum outro ou algo do tipo.
+
+Já quando uma classe é pública, ela pode ser acessada a partir de outros projetos, como as classes padrão do .NET.
+
 ============using (<atribuição de referência>) { }============
 
 Utilizar o using dessa forma serve para gerenciar a nossa referência e usá-la apenas no bloco de código que vem após a expressão using.
@@ -179,12 +197,4 @@ Usamos esta anotação para informar que esse é o construtor que deve ser utili
 É uma classe utilizada para fazer a conversão de JSON para objetos C# e vice-versa.
 
 Possui métodos como "Deserialize<>()" e etc. Servem para fazer essa conversão.
-
-============namespace============
-
-Um namespace é um modo de definirmos onde pertence uma classe, assim como os pacotes do Java.
-
-Normalmente colocamos o nome do namespace encadeando o nome das pastas.
-
-Se não utilizamos o using com o namespace que queremos, devemos passar o full qualified name.
 
