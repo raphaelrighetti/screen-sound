@@ -1,0 +1,190 @@
+============STRING EM BLOCO============
+
+No C#, conseguimos fazer umas string que respeita as quebras de linhas e tudo mais colocando um "@" na frente das aspas.
+
+============Console.WriteLine() & Console.ReadLine()============
+
+Output e input no console.
+
+============int.Parse()============
+
+Converte um valor para inteiro.
+
+Parse() existe para outros tipos também.
+
+============Thread.Sleep()============
+
+Para a execução da Thread em questão pelo tempo passado por parâmetro (milissegundos).
+
+============System.Environment.Exit()============
+
+Finaliza completamente a execução do programa.
+
+============MODIFICADORES DE ACESSO============
+
+Por padrão, o modificador de acesso que é aplicado quando não o informamos é o "private".
+
+Referência dos modificadores:
+
+    https://learn.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/access-modifiers
+
+============List<>============
+
+Parecido com os arrays no C# com a Unity (não sei se funcionam da mesma forma com o .NET puro).
+
+Acessamos elementos com "[]" e podemos pegar o número de itens com a propriedade "Count".
+
+Quando é uma lista com valores numéricos, possui métodos como "Average()" e etc.
+
+============Dictionary<<tipo chave>, <tipo valor>>============
+
+Parecido com os mapas no Java.
+
+Uma estrutura de dados que funciona no formato chave-valor.
+
+Importante lembrar que o valor pode ser uma lista ou algo do tipo, não tinha parado pra raciocinar isso.
+
+Podemos acessar um item passando a chave entre "[]".
+
+Possui "Keys", "ContainsKey()", "Add()" e etc.
+
+============! & ?============
+
+Podemos assegurar ao C# que a nossa variável não será nula com o operador "!".
+
+Podemos dizer que a nossa variável pode ser nula com o operador "?".
+
+============public <tipo> <nome> { get; set; }============
+
+Dessa forma conseguimos definir as operações que são permitidas em nossos atributos públicos sem a necessidade de criar métodos separados pra isso.
+
+Importante saber que podemos criar condições especiais para que só possamos alterar o valor com um set se elas forem atendidas, por exemplo.
+
+Podemos abrir um bloco para executarmos as ações dependendo de alguma condição ou executar um bloco de ações quando um usuário acessar a propriedade em questão em um get ou um set.
+
+Exemplo:
+
+    public string Apresentacao
+    {
+        get
+        {
+            return $"Meu nome é {nome}";
+        }
+    }
+
+Quando vamos fazer um bloco de set, podemos acessar o valor passado à propriedade com a palavra chave "value" sem precisar receber um parâmetro value explicitamente.
+
+============PROPRIEDADES============
+
+Variáveis públicas com operações de leitura, ou escrita, ou os dois.
+
+Podemos utilizar o snippet "prop" para o Visual Studio criar uma propriedade genérica para nós automaticamente.
+
+Sempre devem seguir o PascalCase.
+
+============LAMBDA============
+
+Lambas no C# utilizam o sinal de arrow function: "=>".
+
+Quando utilizadas em propriedades, podemos definir o valor de get da propriedade em questão passando ele diretamente na expressão lambda.
+
+Exemplo:
+
+    public string Apresentacao => $"Meu nome é {nome}";
+
+No geral, funcionam como as lambdas do Java, mas com a sintaxe do JavaScript.
+
+Mais um exemplo:
+
+    listaDeNumeros.FindAll(numero => numero % 2 ==0);
+
+São usadas em filtragem de coleções e muitas outras coisas.
+
+Podemos utilizar de maneiras como essa também:
+
+    public int Somar(int a, int b) => a + b;
+
+============ctor============
+
+Snippet para criação de um construtor.
+
+============INITIALIZERS============
+
+Initializers são blocos que nos permitem iniciar objetos e coleções com uma sintaxe declarativa, sem precisarmos de um construtor ou de acessar as propriedades após a criação da referência.
+
+Os initializers parecem objetos JavaScript e são basicamente a mesma coisa para objetos e coleções, mudando que nos objetos precisamos passar o nome da propriedade antes do valor.
+
+Exemplo:
+
+    Musica musica = new Musica("Canção", "Cantor")
+    {
+        Duracao = 273,
+        Disponivel = true,
+    };
+
+Dessa forma iremos passar o valor das propriedades opcionais de um objeto sem ter que acessá-las por fora do construtor e sem termos que criar uma sobrecarga para o construtor do objeto.
+
+============new()============
+
+Podemos instanciar um objeto invocando o new sem o nome da classe depois, pois o C# faz a inferência do tipo desse new com base no tipo da variável.
+
+============OrderBy(<lambda>)============
+
+Método de filtragem de listas.
+
+Recebe uma lambda expression para fazer a ordem.
+
+============using (<atribuição de referência>) { }============
+
+Utilizar o using dessa forma serve para gerenciar a nossa referência e usá-la apenas no bloco de código que vem após a expressão using.
+
+Exemplo:
+
+    using (HttpClient client = new HttpClient())
+    {
+        
+    }
+
+Ao final do bloco essa referência será liberada.
+
+============HttpClient============
+
+É uma classe que nos permite fazer requisições HTTP.
+
+Possui método como "GetString()", "GetStringAsync()" e etc. Eles servem para fazer a requisição e pegar a resposta com um tipo específico.
+
+Importante saber que os métodos "Async" retornam uma task que ainda não foi terminada, mas que podemos especificar para o C# aguardar estar completa para mexer com o valor com a palavra chave "await" antes de executarmos o método. Dessa forma o retorno do método não será mais uma task, e sim uma referência do tipo que estamos pegando da resposta.
+
+============ANNOTATIONS============
+
+Temos annotations no C#, que funcionam dee maneira bem parecida com as annotations do Java.
+
+Sintaxe:
+
+    [JsonPropertyName(<nome da propriedade>)]
+    public string <nome> { get; set; }
+
+============[JsonPropertyName(<nome>)]============
+
+É uma anotação que utilizamos em cima de propriedade quando estamos fazendo uma classe que irá receber dados de um campo do JSON em uma propriedade específica.
+
+Utilizando essa anotação, não precisamos utilizar o mesmo nome do atributo no JSON para a propriedade da nossa classe.
+
+============[JsonConstructor]============
+
+Usamos esta anotação para informar que esse é o construtor que deve ser utilizado para a desserialização do JSON no nosso objeto.
+
+============System.Text.Json.JsonSerializer============
+
+É uma classe utilizada para fazer a conversão de JSON para objetos C# e vice-versa.
+
+Possui métodos como "Deserialize<>()" e etc. Servem para fazer essa conversão.
+
+============namespace============
+
+Um namespace é um modo de definirmos onde pertence uma classe, assim como os pacotes do Java.
+
+Normalmente colocamos o nome do namespace encadeando o nome das pastas.
+
+Se não utilizamos o using com o namespace que queremos, devemos passar o full qualified name.
+
