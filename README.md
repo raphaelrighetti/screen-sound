@@ -28,6 +28,16 @@ Nesta aula vi como utilizar a herança no C#.
 
 Aprendi também a sobrescrever os métodos e as palavras chave "virtual" e "override".
 
+### Aula 4
+
+#### Entendendo interfaces
+
+Nesta aula aprendi a utilizar interfaces no C#.
+
+Além disso, vi que todos os tipos do C# herdam de Object em sua hierarquia, que possui métodos como "ToString()", "Equals()" e "GetHashCode()", assim como no Java.
+
+Também dei uma olhada nas documentações de "List<>" e "IEnumerable<>" e vi que é uma boa utilizar o IEnumerable quando queremos uma coleção iterável mas que não dê a facilidade de adicionar e remover itens, assim protegendo nossas coleções e deixando o código mais encapsulado.
+
 ## C#: consumindo API, gravando arquivos e utilizando o LINQ
 
 Neste curso irei aprender a como consumir APIs realizando requisições HTTP no C#, mexer com arquivos do sistema e utilizar o LINQ.

@@ -40,6 +40,14 @@ Acessamos elementos com "[]" e podemos pegar o número de itens com a propriedad
 
 Quando é uma lista com valores numéricos, possui métodos como "Average()" e etc.
 
+Existem métodos como o "Any()" ou o "First()" que recebem uma expressão lambda e retornam algo com base na expressão passada. No caso do "Any()", passamos uma expressão que retorna um bool no lambda, e ele usará a expressão para retornam se existe algum objeto que corresponda à expressão passada.
+
+Exemplo:
+
+    bool temAlgum = lista.Any(item => item.Nome.Equals("Nome"));
+
+Nesse caso, a variável "temAlgum" só será true se existir algum item na lista que tenha o nome "Nome".
+
 ============Dictionary<<tipo chave>, <tipo valor>>============
 
 Parecido com os mapas no Java.
@@ -159,6 +167,34 @@ Já quando uma classe é pública, ela pode ser acessada a partir de outros proj
 "virtual" é a palavra chave que utilizamos para dizer que um método da classe superior pode ser sobrescrito na classe inferior.
 
 Podemos utilizar a palavra chave "base" para acessar a classe superior e seus métodos, assim podendo até executar o método que estamos sobrescrevendo da classe superior dentro do método da classe inferior.
+
+Se escrevemos "override" e damos um espaço, uma série de opções dos métodos que podemos sobrescrever da classe superior irá aparecer para escolhermos.
+
+============interface============
+
+Interfaces no C# podem ter propriedades.
+
+Quando temos uma propriedade em uma interface, devemos definir a assinatura dela na própria interface, ou seja, definir se terá get e set ou apenas get. Dessa forma precisamos que todas as classes que implementam a interface tenham a propriedade assinada do jeito que especificamos na interface, mas podendo mudar a lógica de get e de set.
+
+============Object============
+
+Todos os objetos, incluindo os tipos primitivos, herdam de Object no C#.
+
+Object possui 3 métodos que podemos sobrescrever:
+
+    1. ToString()
+    2. Equals()
+    3. GetHashCode()
+
+É tudo bem parecido com o Java, então não vou entrar em detalhes.
+
+============IEnumerable<>============
+
+É a interface base para todas as coleções.
+
+Ela nos fornece uma maneira de iterar os elementos na coleção e todas as coleções podem virar um IEnumerable.
+
+Pode ser útil para não darmos facilidade de adicionar ou remover itens das nossas coleções em métodos get e etc, assim deixando o código mais encapsulado.
 
 ============using (<atribuição de referência>) { }============
 
