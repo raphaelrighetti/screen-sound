@@ -61,3 +61,11 @@ Foi um curso muito bom no geral, apesar de eu já ter conhecimento sobre orienta
 ## C#: consumindo API, gravando arquivos e utilizando o LINQ
 
 Neste curso irei aprender a como consumir APIs realizando requisições HTTP no C#, mexer com arquivos do sistema e utilizar o LINQ.
+
+### Aula 1
+
+#### HttpClient e try-catch
+
+Nesta aula aprendi a executar uma requisição que retorna a resposta em string de forma assíncrona, utilizando o await para aguardar a finalização da Task.
+
+Além disso, vi como fazer um try-catch no C#, que não se difere muito de um try-catch no Java.
