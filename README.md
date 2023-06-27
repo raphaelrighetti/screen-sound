@@ -69,3 +69,9 @@ Neste curso irei aprender a como consumir APIs realizando requisições HTTP no 
 Nesta aula aprendi a executar uma requisição que retorna a resposta em string de forma assíncrona, utilizando o await para aguardar a finalização da Task.
 
 Além disso, vi como fazer um try-catch no C#, que não se difere muito de um try-catch no Java.
+
+### Aula 2
+
+#### Serialização/Desserialização JSON
+
+Nesta aula aprendi a mapear respostas JSON para classes do C# utilizando algumas classes de "System.Text.Json", como "JsonSerializer" e a annotation (não sei se é certo chamar assim no C#) "JsonPropertyName()", assim como detalhes de como fazer esse processo de conversão funcionar.

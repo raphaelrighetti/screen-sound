@@ -1,32 +1,20 @@
-﻿namespace ScreenSound.Modelos;
+﻿using System.Text.Json.Serialization;
 
-internal class Musica : IAvaliavel
+namespace ScreenSound.Modelos;
+
+internal class Musica
 {
-    private readonly List<Avaliacao> notas = new();
+    [JsonPropertyName("artist")]
+    public string? Artista { get; set; }
+    [JsonPropertyName("song")]
+    public string? Nome { get; set; }
+    [JsonPropertyName("duration_ms")]
+    public int Duracao { get; set; }
+    [JsonPropertyName("genre")]
+    public string? TextoGenero { get; set; }
 
-    public Musica(string nome, string genero, int duracao, Artista artista, Album album)
+    public override string ToString()
     {
-        Nome = nome;
-        Genero = genero;
-        Duracao = duracao;
-        Artista = artista;
-        Album = album;
-
-        Album.AdicionarMusica(this);
-        Artista.AdicionarAlbum(Album);
-    }
-
-    public string Nome { get; set; }
-    public string Genero { get; set; }
-    public int Duracao { get; }
-    public Artista Artista { get; }
-    public Album Album { get; }
-
-    public IEnumerable<int> Notas => notas.ConvertAll<int>(nota => nota.Nota);
-    public int Media => (int)Notas.Average();
-
-    public void Avaliar(Avaliacao avaliacao)
-    {
-        notas.Add(avaliacao);
+        return $"Artista: {Artista}, Nome: {Nome}, Duração: {Duracao}, Gênero: {TextoGenero}";
     }
 }
