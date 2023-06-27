@@ -75,3 +75,11 @@ Além disso, vi como fazer um try-catch no C#, que não se difere muito de um tr
 #### Serialização/Desserialização JSON
 
 Nesta aula aprendi a mapear respostas JSON para classes do C# utilizando algumas classes de "System.Text.Json", como "JsonSerializer" e a annotation (não sei se é certo chamar assim no C#) "JsonPropertyName()", assim como detalhes de como fazer esse processo de conversão funcionar.
+
+### Aula 3
+
+#### LINQ (Language Integrated Query)
+
+Nesta aula aprendi a realizar consultas, filtragens, ordenações e muitas outras coisas utilizando o LINQ, biblioteca que torna muito mais fácil a manipulação de bases de dados.
+
+Achei muito interessante a utilização do LINQ, pois tudo que fiz foi utilizando métodos que já ficam disponíveis nas próprias coleções em que estamos trabalhando, tornando muito fácil o processo de encadear métodos conforme a nossa necessidade.

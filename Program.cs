@@ -1,4 +1,5 @@
-﻿using ScreenSound.Modelos;
+﻿using ScreenSound.Filtros;
+using ScreenSound.Modelos;
 using System.Text.Json;
 
 using (HttpClient client = new())
@@ -10,13 +11,11 @@ using (HttpClient client = new())
 
         List<Musica> musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
 
-        musicas = musicas.OrderBy(musica => musica.Nome).ToList();
-
-        foreach (var musica in musicas)
-        { 
-            Console.WriteLine(musica);
-            Console.WriteLine();
-        }
+        //LinqUtils.ListarTodosOsGeneros(musicas);
+        //LinqUtils.ListarTodosArtistas(musicas);
+        //LinqUtils.ListarArtistasPorGenero(musicas, "hip hop");
+        //LinqUtils.ListarMusicasDoArtista(musicas, "Michael Jackson");
+        LinqUtils.ListarMusicasPorAno(musicas, 2010);
     } catch (Exception ex)
     {
         Console.WriteLine($"Deu pau: {ex.Message}");

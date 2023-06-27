@@ -253,3 +253,21 @@ Usamos esta anotação para informar que esse é o construtor que deve ser utili
 É uma classe utilizada para fazer a conversão de JSON para objetos C# e vice-versa.
 
 Possui métodos como "Deserialize<>()" e etc. Servem para fazer essa conversão.
+
+============lista.Select(item => item.Prop).Distinct()============
+
+O método "Select()" das listas nos permite criar uma nova lista contendo apenas os valores de certa propriedade do tipo da lista original. Podemos ter uma lista das propriedades "Genero" das musicas a partir do método "Select()" da nossa lista de músicas.
+
+Podemos utilizar o método "Distinct()" para informar que se algum item do "Select()" se repetir na lista, ele não seja adicionado à lista, assim fazendo com que a lista contenha apenas elementos únicos.
+
+============OderBy() & OrderByDescending()============
+
+São os métodos de ordenação de listas do LINQ. Ascendente e descendente.
+
+Passamos uma lambda que retorna a propriedade pela qual queremos que a lista seja ordenada.
+
+============Where() & FindAll()============
+
+Métodos que filtram uma lista a partir de um "Predicate" (lambda de condição).
+
+Os dois fazem essencialmente a mesma coisa, mas imagino que funcionem de maneira diferente por baixo dos panos.

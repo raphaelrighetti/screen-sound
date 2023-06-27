@@ -12,6 +12,11 @@ internal class Musica
     public int Duracao { get; set; }
     [JsonPropertyName("genre")]
     public string? TextoGenero { get; set; }
+    [JsonPropertyName("year")]
+    public string? TextoAno { get; set; }
+
+    public List<string> Generos => TextoGenero!.Split(",", StringSplitOptions.TrimEntries).ToList();
+    public int Ano => int.Parse(TextoAno!);
 
     public override string ToString()
     {
