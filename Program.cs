@@ -1,25 +1,14 @@
-﻿using ScreenSound.Modelos;
-using System.Text.Json;
+﻿using ScreenSound.Menus;
+using ScreenSound.Modelos;
 
-using (HttpClient client = new HttpClient())
-{
-    try
-    {
-        string resultado = await client.GetStringAsync("https://guilhermeonrails.github.io/api-csharp-songs/songs.json");
-        var musicas = JsonSerializer.Deserialize<List<Musica>>(resultado)!;
+Menu menuBemVindo = new MenuBemVindo("Bem vindo(a) ao Screen Sound");
+menuBemVindo.Executar();
 
-        //foreach (var musica in musicas)
-        //{
-        //    musica.ExibirDetalhes();
-        //}
+Console.Clear();
 
-        foreach (var musica in musicas)
-        {
-            musica.ExibirDetalhes();
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Deu pau: {ex.Message}");
-    }
-}
+Artista metallica = new("Metallica");
+Album blackAlbum = new("Black Album", metallica);
+Musica enterSandman = new("Enter Sandman", "Metal", 331, metallica, blackAlbum);
+Musica sadButTrue = new("Sad But True", "Metal", 323, metallica, blackAlbum);
+
+Console.WriteLine(blackAlbum);
