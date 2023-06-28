@@ -83,3 +83,11 @@ Nesta aula aprendi a mapear respostas JSON para classes do C# utilizando algumas
 Nesta aula aprendi a realizar consultas, filtragens, ordenações e muitas outras coisas utilizando o LINQ, biblioteca que torna muito mais fácil a manipulação de bases de dados.
 
 Achei muito interessante a utilização do LINQ, pois tudo que fiz foi utilizando métodos que já ficam disponíveis nas próprias coleções em que estamos trabalhando, tornando muito fácil o processo de encadear métodos conforme a nossa necessidade.
+
+### Aula 4
+
+#### Trabalhando com IO
+
+Nesta aula aprendi como gerar um arquivo JSON utilizando a classe "File" do namespace "System.IO", assim como arquivos txt utilizando a classe "StreamWriter".
+
+Além disso, vi que é possível criar objetos anônimos no C#, o que ajuda quando queremos um objeto genérico para representar um objeto JSON sem termos que criar uma classe para isso.

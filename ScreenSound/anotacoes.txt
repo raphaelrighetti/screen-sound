@@ -271,3 +271,26 @@ Passamos uma lambda que retorna a propriedade pela qual queremos que a lista sej
 Métodos que filtram uma lista a partir de um "Predicate" (lambda de condição).
 
 Os dois fazem essencialmente a mesma coisa, mas imagino que funcionem de maneira diferente por baixo dos panos.
+
+============OBJETOS ANÔNIMOS============
+
+No C# podemos criar objetos anônimos, que são objetos que não dependem de uma classe para serem criados.
+
+Para isso, basta utilizar a sintaxe:
+
+    new
+    {
+        prop = "algo",
+    }
+
+Dessa forma temos um objeto anônimo com as propriedades que passamos no initializer.
+
+============File============
+
+É uma classe que nos permite trabalhar com arquivos no computador.
+
+Possui métodos de leitura e escrita.
+
+============System.IO============
+
+É um namespace que possui diversas classes para trabalhar com streams, leitura e escrita de arquivo e etc.
