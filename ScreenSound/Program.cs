@@ -11,22 +11,28 @@ using (HttpClient client = new())
 
         List<Musica> musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
 
+        //foreach (var musica in musicas)
+        //{
+        //    Console.WriteLine(musica);
+        //}
+
         //LinqUtils.ListarTodosOsGeneros(musicas);
         //LinqUtils.ListarTodosArtistas(musicas);
         //LinqUtils.ListarArtistasPorGenero(musicas, "hip hop");
         //LinqUtils.ListarMusicasDoArtista(musicas, "Michael Jackson");
         //LinqUtils.ListarMusicasPorAno(musicas, 2010);
+        LinqUtils.ListarMusicasPorTonaldade(musicas, "C#");
 
-        MusicasFavoritas favoritasDoRapha = new("Raphael");
+        //MusicasFavoritas favoritasDoRapha = new("Raphael");
 
-        favoritasDoRapha.AdicionarMusicaFavorita(musicas[0]);
-        favoritasDoRapha.AdicionarMusicaFavorita(musicas[1]);
-        favoritasDoRapha.AdicionarMusicaFavorita(musicas[2]);
-        favoritasDoRapha.AdicionarMusicaFavorita(musicas[3]);
-        favoritasDoRapha.AdicionarMusicaFavorita(musicas[4]);
+        //favoritasDoRapha.AdicionarMusicaFavorita(musicas[0]);
+        //favoritasDoRapha.AdicionarMusicaFavorita(musicas[1]);
+        //favoritasDoRapha.AdicionarMusicaFavorita(musicas[2]);
+        //favoritasDoRapha.AdicionarMusicaFavorita(musicas[3]);
+        //favoritasDoRapha.AdicionarMusicaFavorita(musicas[4]);
 
-        favoritasDoRapha.ListarMusicasFavoritas();
-        favoritasDoRapha.GerarArquivoJson();
+        //favoritasDoRapha.ListarMusicasFavoritas();
+        //favoritasDoRapha.GerarArquivoJson();
     } catch (Exception ex)
     {
         Console.WriteLine($"Deu pau: {ex.Message}");

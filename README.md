@@ -91,3 +91,19 @@ Achei muito interessante a utilização do LINQ, pois tudo que fiz foi utilizand
 Nesta aula aprendi como gerar um arquivo JSON utilizando a classe "File" do namespace "System.IO", assim como arquivos txt utilizando a classe "StreamWriter".
 
 Além disso, vi que é possível criar objetos anônimos no C#, o que ajuda quando queremos um objeto genérico para representar um objeto JSON sem termos que criar uma classe para isso.
+
+### Aula 5
+
+#### Resolvendo desafios
+
+Nesta aula resolvi dois desafios que envolveram tanto a conversão de JSON para objetos C#, quanto a utilização do LINQ para filtrar a lista de músicas por tonalidade da música.
+
+Foi um aula boa para praticar o que foi visto nas outras.
+
+### Conclusão
+
+Neste curso aprendi a trabalhar com dados em formato JSON no C#, fazer a serialização de desserialização desses dados, fazer requisições com o HttpClient, fazer filtros e ordenações utilizando o LINQ, fazer leitura e escrita de arquivos com algumas classes do System.IO, entre outras coisas.
+
+Foi um curso bem interessante, principalmente tudo que foi mostrado do LINQ, gostei muito da facilidade com que conseguimos manipular as coleções com ele.
+
+Agora sinto que entendo um pouco mais de C# e estou gostando bastante da linguagem.

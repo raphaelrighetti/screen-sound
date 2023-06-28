@@ -74,4 +74,18 @@ internal class LinqUtils
             Console.WriteLine($"- {musica.Nome} - {musica.Artista}");
         }
     }
+
+    public static void ListarMusicasPorTonaldade(List<Musica> musicas, string tonalidade)
+    {
+        var musicasDaTonalidade = musicas
+            .Where(musica => musica.Tonalidade.Equals(tonalidade))
+            .ToList();
+
+        Console.WriteLine($"Musicas da tonalidade: {tonalidade}\n");
+
+        foreach (var musica in musicasDaTonalidade)
+        {
+            Console.WriteLine($"- {musica.Nome} - {musica.Artista}");
+        }
+    }
 }
